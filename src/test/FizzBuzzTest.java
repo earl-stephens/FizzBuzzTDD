@@ -36,4 +36,18 @@ public class FizzBuzzTest {
 		String actual = fizzbuzz.test(2);
 		Assert.assertEquals("2", actual);
 	}
+	
+	@Test
+	public void shouldReturnBuzzIfInputIsFive() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(5);
+		Assert.assertEquals("Buzz", actual);
+	}
+	
+	@Test
+	public void shouldReturnFizzIfInputIsMultipleOfFive() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(25);
+		Assert.assertEquals("Buzz", actual);
+	}
 }
