@@ -16,4 +16,24 @@ public class FizzBuzzTest {
 		FizzBuzz fizzBuzz = new FizzBuzz();
 		Assert.assertNotNull(fizzBuzz);
 	}
+	
+	@Test
+	public void shouldReturnFizzIfInputIsMultipleOfThree() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(3);
+		Assert.assertEquals("Fizz", actual);
+	}
+	
+	@Test
+	public void shouldReturnFizzIfInputIsMultiplesOfThree() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(9);
+		Assert.assertEquals("Fizz", actual);
+	}
+	@Test
+	public void shouldReturnNumberIfNotMultipleOfThree() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(2);
+		Assert.assertEquals("2", actual);
+	}
 }
