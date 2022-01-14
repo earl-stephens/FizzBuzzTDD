@@ -7,6 +7,8 @@ import main.FizzBuzz;
  * For multiples of three print "Fizz" instead of the
  * number.  For multiples of five print "Buzz".  
  * Anything else simply returns the number.
+ * For numbers which are multiples of both three and
+ * five, print "FizzBuzz".
  */
 
 public class FizzBuzzTest {
@@ -49,5 +51,12 @@ public class FizzBuzzTest {
 		FizzBuzz fizzbuzz = new FizzBuzz();
 		String actual = fizzbuzz.test(25);
 		Assert.assertEquals("Buzz", actual);
+	}
+	
+	@Test
+	public void shouldReturnFizzBuzzIfInputIsMultipleOfThreeAndFive() {
+		FizzBuzz fizzbuzz = new FizzBuzz();
+		String actual = fizzbuzz.test(15);
+		Assert.assertEquals("FizzBuzz", actual);
 	}
 }
